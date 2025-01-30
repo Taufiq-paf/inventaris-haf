@@ -41,9 +41,10 @@ class InventarisResource extends Resource
                 Forms\Components\TextInput::make('lokasi')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('foto')
+                Forms\Components\FileUpload::make('foto')
                     ->required()
-                    ->maxLength(255),
+                    ->image()
+                    ->imageEditor(),
                 Forms\Components\TextInput::make('bidang')
                     ->required()
                     ->maxLength(255),
@@ -78,8 +79,8 @@ class InventarisResource extends Resource
                     ->searchable(),
                 Tables\Columns\TextColumn::make('lokasi')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('foto')
-                    ->searchable(),
+                Tables\Columns\ImageColumn::make('foto')
+                    ->square(),
                 Tables\Columns\TextColumn::make('bidang')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('nama_pj')
