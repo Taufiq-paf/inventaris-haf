@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class jenis_inventaris extends Model
+class Jenis_inventaris extends Model
 {
     use HasFactory;
 }
